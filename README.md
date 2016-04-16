@@ -1,5 +1,7 @@
 # Circular loader integrated with a floating action button.
 
+[![GitHub license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/DmitryMalkovich/circular-with-floating-action-button/blob/master/LICENSE.txt)
+
 Progress Floating Action Button helps to integrate circular progress bar to fab with minimal effort. Also it supports all default functionality of floating action button and progress bar. Idea was to not create custom floating action button, but help to integrate circular progress to a floating action button like described here: https://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators.
 
 <img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
