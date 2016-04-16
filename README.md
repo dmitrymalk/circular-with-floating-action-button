@@ -1,13 +1,13 @@
 # Circular loader integrated with a floating action button.
 
-Progress Floating Action Button supports all default functionality of floating action button and progress bar. Idea is to not create custom floating action button, but help to integrate circular progress to fab with minimal effort.
+Progress Floating Action Button helps to integrate circular progress bar to fab with minimal effort. Also it supports all default functionality of floating action button and progress bar. Idea was to not create custom floating action button, but help to integrate circular progress to a floating action button like described here: https://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators.
 
 <img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
 
 ### Getting Started
 
 For using it you need to add one small file to your project: `ProgressFloatingActionButton.java`
-After you can add your fab and progress bar inside 'ProgressFloatingActionButton' like you see below to achice progress bar integration with floating action button.
+After that you can add your fab and progress bar inside 'ProgressFloatingActionButton'. Like you see below to achieve progress bar integration with floating action button. In near future i plan to add more examples and fetatues that helps you to work with it.
 
 ```
 <com.dmitrymalkovich.android.progressfabsample.ProgressFloatingActionButton
@@ -32,7 +32,7 @@ After you can add your fab and progress bar inside 'ProgressFloatingActionButton
     </com.dmitrymalkovich.android.progressfabsample.ProgressFloatingActionButton>
 ```
 
-We persist all defalt functionalty and flexibility, so you can use your fab as before with minimal effort.
+We persist all defalt functionalty and flexibility, so you customize your fab as before. Happy coding!
 
 ## Sample Project
 
