@@ -9,7 +9,7 @@ Progress Floating Action Button helps to integrate circular progress bar to fab 
 For using it you need to add one small file to your project: `ProgressFloatingActionButton.java`
 After that you can add your fab and progress bar inside 'ProgressFloatingActionButton'. Like you see below to achieve progress bar integration with floating action button. In near future I plan to add more examples and features that helps you to work with it.
 
-```
+```xml
 <com.dmitrymalkovich.android.progressfabsample.ProgressFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
