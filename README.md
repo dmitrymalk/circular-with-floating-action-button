@@ -1,8 +1,8 @@
 # Circular loader integrated with a floating action button.
 
-ProgressFloatingActionButton supports all default functionality of floating action button and progress bar. Idea is to not create custom floating action button, but help to integrate circular progress to fab with minimal effort.
+Progress Floating Action Button supports all default functionality of floating action button and progress bar. Idea is to not create custom floating action button, but help to integrate circular progress to fab with minimal effort.
 
-<img width="40%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
+<img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
 
 ### Getting Started
 
@@ -36,7 +36,7 @@ We persist all defalt functionalty and flexibility, so you can use your fab as b
 
 ## Sample Project
 
-You can download the sample APK from this repo here:
+You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v0.1.1
 
 ## License
 
