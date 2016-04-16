@@ -32,7 +32,7 @@ After that you can add your fab and progress bar inside 'ProgressFloatingActionB
     </com.dmitrymalkovich.android.progressfabsample.ProgressFloatingActionButton>
 ```
 
-We persist all defalt functionalty and flexibility, so you customize your fab as before. Happy coding!
+We persist all default functionalty and flexibility, so you customize your fab as before. Happy coding!
 
 ## Sample Project
 
