@@ -2,43 +2,40 @@
 
 [![GitHub license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/DmitryMalkovich/circular-with-floating-action-button/blob/master/LICENSE.txt)
 
-Progress Floating Action Button helps to integrate circular progress bar to fab with minimal effort. Also it supports all default functionality of floating action button and progress bar. Idea was to not create custom floating action button, but help to integrate circular progress to a floating action button like described here: https://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators.
+Add a circular progress bar to any existing fab. Idea was to not create custom floating action button, but help to **integrate existing circular progress with existing floating action button** like described here: https://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators.
 
-<img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
+<img width="359" alt="screen shot 2016-04-17 at 20 00 03" src="https://cloud.githubusercontent.com/assets/2931932/14588785/b15cb84a-04da-11e6-9771-b0e54b6a6201.png"/>
 
-### Getting Started
+### Sample Project
 
-For using it you need to add one small file to your project: `ProgressFloatingActionButton.java`
-After that you can add your fab and progress bar inside 'ProgressFloatingActionButton'. Like you see below to achieve progress bar integration with floating action button. In near future I plan to add more examples and features that helps you to work with it.
+You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v0.1.1
+
+### Usage
+
+- Add to your project: `ProgressFloatingActionButton.java`
+- Add your progress bar and floating action button to ProgressFloatingActionButton in your layout
 
 ```xml
-<com.dmitrymalkovich.android.progressfabsample.ProgressFloatingActionButton
+<com.dmitrymalkovich.ProgressFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:clickable="true"
-        app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end">
+        android:clickable="true">
 
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_backup_black_24dp"
-            app:backgroundTint="@color/colorFab" />
+            android:src="@drawable/ic_backup_black_24dp" />
 
         <ProgressBar
             style="@style/Widget.AppCompat.ProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-    </com.dmitrymalkovich.android.progressfabsample.ProgressFloatingActionButton>
+    </com.dmitrymalkovich.ProgressFloatingActionButton>
 ```
 
-We persist all default functionalty and flexibility, so you customize your fab as before. Happy coding!
-
-## Sample Project
-
-You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v0.1.1
+<img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
 
 ## License
 
