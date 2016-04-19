@@ -27,10 +27,8 @@ import android.widget.ProgressBar;
 /**
  * ProgressFloatingActionButton.java
  * Created by: Dmitry Malkovich
- * <p/>
+ *
  * A circular loader is integrated with a floating action button.
- * <a href="https://www.google.com/design/spec/components/progress-activity.html#
- * progress-activity-types-of-indicators">Material Design Guide (Circular with integration)</a>
  */
 public class ProgressFloatingActionButton extends FrameLayout {
 
