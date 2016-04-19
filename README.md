@@ -8,7 +8,7 @@ Add a circular progress bar to any existing fab. Idea was to not create custom f
 
 ### Sample Project
 
-You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v0.1.1
+You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v1.1
 
 ### Usage
 
