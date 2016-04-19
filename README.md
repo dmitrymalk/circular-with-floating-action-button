@@ -1,6 +1,10 @@
 # Circular loader integrated with a floating action button.
 
-[![GitHub license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/DmitryMalkovich/circular-with-floating-action-button/blob/master/LICENSE.txt)
+[![GitHub license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/DmitryMalkovich/circular-with-floating-action-button/blob/master/LICENSE.md)
+
+[![jFrog Bintray](https://img.shields.io/bintray/v/asciidoctor/maven/asciidoctorj.svg)](https://bintray.com/dmitrymalkovich/maven/progress-fab)
+
+[![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven/apache-maven.svg)](https://bintray.com/dmitrymalkovich/maven/progress-fab)
 
 Add a circular progress bar to any existing fab. Idea was to not create custom floating action button, but help to **integrate existing circular progress with existing floating action button** like described here: https://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators.
 
@@ -16,7 +20,7 @@ You can download the sample APK from this repo here: https://github.com/DmitryMa
 - Add your progress bar and floating action button to ProgressFloatingActionButton in your layout
 
 ```xml
-<com.dmitrymalkovich.ProgressFloatingActionButton
+<com.dmitrymalkovich.android.ProgressFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
@@ -32,7 +36,7 @@ You can download the sample APK from this repo here: https://github.com/DmitryMa
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-    </com.dmitrymalkovich.ProgressFloatingActionButton>
+    </com.dmitrymalkovich.android.ProgressFloatingActionButton>
 ```
 
 <img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
