@@ -1,6 +1,6 @@
 # Circular loader integrated with a floating action button.
 
-[![GitHub license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/DmitryMalkovich/circular-with-floating-action-button/blob/master/LICENSE.md) [![jFrog Bintray](https://img.shields.io/bintray/v/asciidoctor/maven/asciidoctorj.svg)](https://bintray.com/dmitrymalkovich/maven/progress-fab) [![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven/apache-maven.svg)](https://bintray.com/dmitrymalkovich/maven/progress-fab)
+[![GitHub license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/DmitryMalkovich/circular-with-floating-action-button/blob/master/LICENSE.md) [![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven/apache-maven.svg)](https://bintray.com/dmitrymalkovich/maven/progress-fab)
 
 Add a circular progress bar to any existing fab. Idea was to not create custom floating action button, but help to **integrate existing circular progress with existing floating action button** like described here: https://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators.
 
