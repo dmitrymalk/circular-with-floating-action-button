@@ -12,7 +12,10 @@ You can download the sample APK from this repo here: https://github.com/DmitryMa
 
 ### Usage
 
-- Add to your project: `ProgressFloatingActionButton.java`
+- Add to your project `ProgressFloatingActionButton.java` manually or via gradle
+```
+compile 'com.dmitrymalkovich.android:progress-fab:1.2'
+```
 - Add your progress bar and floating action button to ProgressFloatingActionButton in your layout
 
 ```xml
