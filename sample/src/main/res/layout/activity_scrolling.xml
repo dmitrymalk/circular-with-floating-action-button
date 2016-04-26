@@ -2,6 +2,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -38,6 +39,26 @@
         android:clickable="true"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_backup_black_24dp"
+            app:backgroundTint="@color/colorFab" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.dmitrymalkovich.android.ProgressFloatingActionButton>
+
+    <com.dmitrymalkovich.android.ProgressFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true">
 
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"

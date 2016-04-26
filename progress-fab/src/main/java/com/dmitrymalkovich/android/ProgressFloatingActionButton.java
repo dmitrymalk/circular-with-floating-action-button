@@ -17,7 +17,9 @@ package com.dmitrymalkovich.android;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -27,17 +29,19 @@ import android.widget.ProgressBar;
 /**
  * ProgressFloatingActionButton.java
  * Created by: Dmitry Malkovich
- *
+ * <p/>
  * A circular loader is integrated with a floating action button.
  */
 public class ProgressFloatingActionButton extends FrameLayout {
 
     private static final float PROGRESS_BAR_SIZE = 16;
+    private final FloatingActionButtonBehavior mBehavour;
     private ProgressBar mProgressBar;
     private FloatingActionButton mFab;
 
     public ProgressFloatingActionButton(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mBehavour = new FloatingActionButtonBehavior();
     }
 
     @Override
@@ -47,6 +51,10 @@ public class ProgressFloatingActionButton extends FrameLayout {
         if (getChildCount() == 0 || getChildCount() > 2) {
             throw new IllegalStateException("Specify only 2 views.");
         }
+
+        CoordinatorLayout.LayoutParams params =
+                (CoordinatorLayout.LayoutParams) getLayoutParams();
+        params.setBehavior(mBehavour);
 
         for (int i = 0; i < getChildCount(); i++) {
             View view = getChildAt(i);
@@ -76,5 +84,31 @@ public class ProgressFloatingActionButton extends FrameLayout {
 
         mFabParams.gravity = Gravity.CENTER;
         mProgressParams.gravity = Gravity.CENTER;
+    }
+
+    /**
+     * Created by: Dmitry Malkovich
+     * Thanks to https://lab.getbase.com/introduction-to-coordinator-layout-on-android/
+     */
+    public class FloatingActionButtonBehavior extends CoordinatorLayout.Behavior<FrameLayout> {
+        @SuppressWarnings("unused")
+        public FloatingActionButtonBehavior() {
+            super();
+        }
+
+        @Override
+        public boolean layoutDependsOn(CoordinatorLayout parent, FrameLayout child, View dependency) {
+            return dependency instanceof Snackbar.SnackbarLayout;
+        }
+
+        @Override
+        public boolean onDependentViewChanged(CoordinatorLayout parent, FrameLayout child,
+                                              View dependency) {
+            float translationY = Math.min(0, dependency.getTranslationY() - dependency.getHeight());
+            if (child.getBottom() > dependency.getTop()) {
+                child.setTranslationY(translationY);
+            }
+            return true;
+        }
     }
 }
