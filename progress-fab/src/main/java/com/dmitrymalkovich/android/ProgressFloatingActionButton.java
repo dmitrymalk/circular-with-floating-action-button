@@ -79,8 +79,8 @@ public class ProgressFloatingActionButton extends FrameLayout {
 
         int additionSize = (int) (PROGRESS_BAR_SIZE * Resources.getSystem()
                 .getDisplayMetrics().density);
-        mProgressBar.getLayoutParams().height = getHeight() + additionSize;
-        mProgressBar.getLayoutParams().width = getWidth() + additionSize;
+        mProgressBar.getLayoutParams().height = mFab.getHeight() + additionSize;
+        mProgressBar.getLayoutParams().width = mFab.getWidth() + additionSize;
 
         mFabParams.gravity = Gravity.CENTER;
         mProgressParams.gravity = Gravity.CENTER;
