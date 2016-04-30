@@ -8,13 +8,13 @@ Add a circular progress bar to any existing fab. Idea was to not create custom f
 
 ### Sample Project
 
-You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v1.2
+You can download the sample APK from this repo here: https://github.com/DmitryMalkovich/circular-with-floating-action-button/releases/tag/v1.4
 
 ### Usage
 
 - Add to your project `ProgressFloatingActionButton.java` manually or via **Gradle**
 ```
-compile 'com.dmitrymalkovich.android:progress-fab:1.2'
+compile 'com.dmitrymalkovich.android:progress-fab:1.4'
 ```
 - Add your progress bar and floating action button to ProgressFloatingActionButton in your layout
 
