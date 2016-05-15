@@ -16,7 +16,6 @@
 package com.dmitrymalkovich.android;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -34,14 +33,13 @@ import android.widget.ProgressBar;
  */
 public class ProgressFloatingActionButton extends FrameLayout {
 
-    private static final float PROGRESS_BAR_SIZE = 16;
-    private final FloatingActionButtonBehavior mBehavour;
+    private final FloatingActionButtonBehavior mBehaviour;
     private ProgressBar mProgressBar;
     private FloatingActionButton mFab;
 
     public ProgressFloatingActionButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mBehavour = new FloatingActionButtonBehavior();
+        mBehaviour = new FloatingActionButtonBehavior();
     }
 
     @Override
@@ -54,7 +52,7 @@ public class ProgressFloatingActionButton extends FrameLayout {
 
         CoordinatorLayout.LayoutParams params =
                 (CoordinatorLayout.LayoutParams) getLayoutParams();
-        params.setBehavior(mBehavour);
+        params.setBehavior(mBehaviour);
 
         for (int i = 0; i < getChildCount(); i++) {
             View view = getChildAt(i);
@@ -77,13 +75,29 @@ public class ProgressFloatingActionButton extends FrameLayout {
         LayoutParams mFabParams = ((LayoutParams) mFab.getLayoutParams());
         LayoutParams mProgressParams = ((LayoutParams) mProgressBar.getLayoutParams());
 
-        int additionSize = (int) (PROGRESS_BAR_SIZE * Resources.getSystem()
-                .getDisplayMetrics().density);
+        int additionSize = getResources().getDimensionPixelSize(R.dimen.progress_bar_size);
         mProgressBar.getLayoutParams().height = mFab.getHeight() + additionSize;
         mProgressBar.getLayoutParams().width = mFab.getWidth() + additionSize;
 
         mFabParams.gravity = Gravity.CENTER;
         mProgressParams.gravity = Gravity.CENTER;
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+
+        if (mFab != null && mProgressBar != null) {
+            LayoutParams mFabParams = ((LayoutParams) mFab.getLayoutParams());
+            LayoutParams mProgressParams = ((LayoutParams) mProgressBar.getLayoutParams());
+
+            int additionSize = getResources().getDimensionPixelSize(R.dimen.progress_bar_size);
+            mProgressBar.getLayoutParams().height = mFab.getHeight() + additionSize;
+            mProgressBar.getLayoutParams().width = mFab.getWidth() + additionSize;
+
+            mFabParams.gravity = Gravity.CENTER;
+            mProgressParams.gravity = Gravity.CENTER;
+        }
     }
 
     /**
