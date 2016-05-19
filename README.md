@@ -12,7 +12,7 @@ You can download the sample APK here: https://github.com/DmitryMalkovich/circula
 
 ### Usage
 
-- Add to your project `ProgressFloatingActionButton.java` manually or via **Gradle**
+- Add to your project via **Gradle**
 ```
 compile 'com.dmitrymalkovich.android:progress-fab:1.5'
 ```
