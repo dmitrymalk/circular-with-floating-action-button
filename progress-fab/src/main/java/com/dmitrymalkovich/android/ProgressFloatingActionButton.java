@@ -50,9 +50,11 @@ public class ProgressFloatingActionButton extends FrameLayout {
             throw new IllegalStateException("Specify only 2 views.");
         }
 
-        CoordinatorLayout.LayoutParams params =
-                (CoordinatorLayout.LayoutParams) getLayoutParams();
-        params.setBehavior(mBehaviour);
+        if (getLayoutParams() instanceof CoordinatorLayout.LayoutParams) {
+            CoordinatorLayout.LayoutParams params =
+                    (CoordinatorLayout.LayoutParams) getLayoutParams();
+            params.setBehavior(mBehaviour);
+        }
 
         for (int i = 0; i < getChildCount(); i++) {
             View view = getChildAt(i);
