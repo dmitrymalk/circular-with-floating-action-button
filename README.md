@@ -14,7 +14,7 @@ You can download the sample APK here: https://github.com/DmitryMalkovich/circula
 
 - Add to your project via **Gradle**
 ```
-compile 'com.dmitrymalkovich.android:progress-fab:1.5'
+compile 'com.dmitrymalkovich.android:progress-fab:1.6'
 ```
 - Add your progress bar and floating action button to ProgressFloatingActionButton in your layout
 
