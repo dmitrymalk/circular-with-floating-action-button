@@ -99,7 +99,7 @@ public class ProgressFloatingActionButton extends FrameLayout {
      * Created by: Dmitry Malkovich
      * Thanks to https://lab.getbase.com/introduction-to-coordinator-layout-on-android/
      */
-    public static class Behavior extends CoordinatorLayout.Behavior<FrameLayout> {
+    public static class Behavior extends CoordinatorLayout.Behavior<ProgressFloatingActionButton> {
         public Behavior() {
             super();
         }
@@ -109,13 +109,14 @@ public class ProgressFloatingActionButton extends FrameLayout {
         }
 
         @Override
-        public boolean layoutDependsOn(CoordinatorLayout parent, FrameLayout child, View dependency) {
+        public boolean layoutDependsOn(CoordinatorLayout parent, ProgressFloatingActionButton child,
+                                       View dependency) {
             return dependency instanceof Snackbar.SnackbarLayout;
         }
 
         @Override
-        public boolean onDependentViewChanged(CoordinatorLayout parent, FrameLayout child,
-                                              View dependency) {
+        public boolean onDependentViewChanged(CoordinatorLayout parent,
+                                              ProgressFloatingActionButton child, View dependency) {
             float translationY = Math.min(0, dependency.getTranslationY() - dependency.getHeight());
             if (child.getBottom() > dependency.getTop()) {
                 child.setTranslationY(translationY);
