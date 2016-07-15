@@ -40,6 +40,15 @@ compile 'com.dmitrymalkovich.android:progress-fab:1.6'
 
 <img width="60%" src="https://cloud.githubusercontent.com/assets/2931932/14582337/84424940-040a-11e6-9236-d362606055bb.png" />
 
+## Contributing
+
+Just make pull request! 
+
+### External contributors
+
+* [Tunous](https://github.com/Tunous)
+* [ligi] (https://github.com/ligi)
+
 ## License
 
 Copyright 2016 Dmitry Malkovich
