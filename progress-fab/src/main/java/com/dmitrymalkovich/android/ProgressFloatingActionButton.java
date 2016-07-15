@@ -31,15 +31,14 @@ import android.widget.ProgressBar;
  * <p/>
  * A circular loader is integrated with a floating action button.
  */
+@CoordinatorLayout.DefaultBehavior(ProgressFloatingActionButton.Behavior.class)
 public class ProgressFloatingActionButton extends FrameLayout {
 
-    private final FloatingActionButtonBehavior mBehaviour;
     private ProgressBar mProgressBar;
     private FloatingActionButton mFab;
 
     public ProgressFloatingActionButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mBehaviour = new FloatingActionButtonBehavior();
     }
 
     @Override
@@ -48,12 +47,6 @@ public class ProgressFloatingActionButton extends FrameLayout {
 
         if (getChildCount() == 0 || getChildCount() > 2) {
             throw new IllegalStateException("Specify only 2 views.");
-        }
-
-        if (getLayoutParams() instanceof CoordinatorLayout.LayoutParams) {
-            CoordinatorLayout.LayoutParams params =
-                    (CoordinatorLayout.LayoutParams) getLayoutParams();
-            params.setBehavior(mBehaviour);
         }
 
         for (int i = 0; i < getChildCount(); i++) {
@@ -106,20 +99,24 @@ public class ProgressFloatingActionButton extends FrameLayout {
      * Created by: Dmitry Malkovich
      * Thanks to https://lab.getbase.com/introduction-to-coordinator-layout-on-android/
      */
-    public class FloatingActionButtonBehavior extends CoordinatorLayout.Behavior<FrameLayout> {
-        @SuppressWarnings("unused")
-        public FloatingActionButtonBehavior() {
+    public static class Behavior extends CoordinatorLayout.Behavior<ProgressFloatingActionButton> {
+        public Behavior() {
             super();
         }
 
+        public Behavior(Context context, AttributeSet attrs) {
+            super(context, attrs);
+        }
+
         @Override
-        public boolean layoutDependsOn(CoordinatorLayout parent, FrameLayout child, View dependency) {
+        public boolean layoutDependsOn(CoordinatorLayout parent, ProgressFloatingActionButton child,
+                                       View dependency) {
             return dependency instanceof Snackbar.SnackbarLayout;
         }
 
         @Override
-        public boolean onDependentViewChanged(CoordinatorLayout parent, FrameLayout child,
-                                              View dependency) {
+        public boolean onDependentViewChanged(CoordinatorLayout parent,
+                                              ProgressFloatingActionButton child, View dependency) {
             float translationY = Math.min(0, dependency.getTranslationY() - dependency.getHeight());
             if (child.getBottom() > dependency.getTop()) {
                 child.setTranslationY(translationY);
