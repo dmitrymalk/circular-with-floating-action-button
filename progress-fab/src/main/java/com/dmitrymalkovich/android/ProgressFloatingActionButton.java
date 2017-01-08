@@ -67,15 +67,7 @@ public class ProgressFloatingActionButton extends FrameLayout {
             throw new IllegalStateException("Progress Bar not specified");
         }
 
-        LayoutParams mFabParams = ((LayoutParams) mFab.getLayoutParams());
-        LayoutParams mProgressParams = ((LayoutParams) mProgressBar.getLayoutParams());
-
-        int additionSize = getResources().getDimensionPixelSize(R.dimen.progress_bar_size);
-        mProgressBar.getLayoutParams().height = mFab.getHeight() + additionSize;
-        mProgressBar.getLayoutParams().width = mFab.getWidth() + additionSize;
-
-        mFabParams.gravity = Gravity.CENTER;
-        mProgressParams.gravity = Gravity.CENTER;
+        resize()
     }
 
     @Override
@@ -83,6 +75,15 @@ public class ProgressFloatingActionButton extends FrameLayout {
         super.onSizeChanged(w, h, oldw, oldh);
 
         if (mFab != null && mProgressBar != null) {
+            resize()
+        }
+    }
+
+    private void resize() {
+            float translationZpx = getResources().getDisplayMetrics().density * 6; // 6 is needed for progress bar to be visible, 5 doesnt work
+            if(Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) 
+                mProgressBar.setTranslationZ(translationZpx);
+
             LayoutParams mFabParams = ((LayoutParams) mFab.getLayoutParams());
             LayoutParams mProgressParams = ((LayoutParams) mProgressBar.getLayoutParams());
 
@@ -92,7 +93,6 @@ public class ProgressFloatingActionButton extends FrameLayout {
 
             mFabParams.gravity = Gravity.CENTER;
             mProgressParams.gravity = Gravity.CENTER;
-        }
     }
 
     /**
