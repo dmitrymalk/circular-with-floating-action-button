@@ -16,6 +16,7 @@
 package com.dmitrymalkovich.android;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -67,7 +68,7 @@ public class ProgressFloatingActionButton extends FrameLayout {
             throw new IllegalStateException("Progress Bar not specified");
         }
 
-        resize()
+        resize();
     }
 
     @Override
@@ -75,13 +76,13 @@ public class ProgressFloatingActionButton extends FrameLayout {
         super.onSizeChanged(w, h, oldw, oldh);
 
         if (mFab != null && mProgressBar != null) {
-            resize()
+            resize();
         }
     }
 
     private void resize() {
-            float translationZpx = getResources().getDisplayMetrics().density * 6; // 6 is needed for progress bar to be visible, 5 doesnt work
-            if(Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) 
+            float translationZpx = getResources().getDisplayMetrics().density * 6; // 6 is needed for progress bar to be visible, 5 doesn't work
+            if(Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP)
                 mProgressBar.setTranslationZ(translationZpx);
 
             LayoutParams mFabParams = ((LayoutParams) mFab.getLayoutParams());
