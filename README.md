@@ -47,8 +47,8 @@ Just make pull request!
 ### External contributors
 
 * [Tunous](https://github.com/Tunous)
-* [ligi] (https://github.com/ligi)
-* [TKolbusz] (https://github.com/TKolbusz)
+* [ligi](https://ligi.de)
+* [TKolbusz](https://github.com/TKolbusz)
 
 ## License
 
